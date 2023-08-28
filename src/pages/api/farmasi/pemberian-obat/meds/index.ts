@@ -1,0 +1,30 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import axios from 'axios';
+import getConfig from 'next/config';
+
+import { AppRequest } from '@shared/request';
+import { getToken } from '@hooks/useToken';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<any>,
+
+) {
+  const { publicRuntimeConfig } = getConfig();
+  const token = getToken(req.headers.authorization);
+  if (req.method === 'GET' && token) {
+    const emrId = req.query.emr_id;
+    const response = await axios.get(
+      `${publicRuntimeConfig.env?.apiv2Url}/farmasi/given-meds-item?emr_id=${emrId}`,
+      {...{
+        headers: {
+          'x-token': token,
+        },
+      },
+      });
+    return res.status(200).json({
+      data: (response.data) ? response.data.data : {},
+    });
+  }
+  return res.status(404).json({ error: 'not found' });
+}

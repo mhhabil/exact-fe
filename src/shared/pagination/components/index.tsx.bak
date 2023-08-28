@@ -1,0 +1,65 @@
+import { ChevronLeft, ChevronRight } from 'react-feather';
+import { Pagination as Paginate, PaginationItem, PaginationLink } from 'reactstrap';
+
+import { IPaginateMeta } from '../entities';
+
+const Pagination = (props: { meta: IPaginateMeta, onButtonClick: any }) => {
+
+  const { meta, onButtonClick } = props;
+  const { currentPage, totalPages } = meta;
+
+  const pageButtons = () => {
+    let element: Array<any> = [];
+    for (let i = 1; i <= totalPages; i++) {
+      element = [
+        ...element,
+        (
+          <PaginationItem active={i === currentPage} key={`paginate-${i}`}>
+            <PaginationLink onClick={() => onButtonClick(i)}>{i}</PaginationLink>
+          </PaginationItem>
+        ),
+      ];
+    }
+    return element;
+  };
+
+  const previousButton = () => {
+    if (currentPage === 1) {
+      return null;
+    }
+    return (
+      <PaginationItem>
+        <PaginationLink onClick={() => onButtonClick(+currentPage - 1)} first>
+          <ChevronLeft size={15} />
+        </PaginationLink>
+      </PaginationItem>
+    )
+  };
+
+  const nextButton = () => {
+    if (currentPage === totalPages) {
+      return null;
+    }
+    return (
+      <PaginationItem>
+        <PaginationLink onClick={() => onButtonClick(+currentPage + 1)} last>
+          <ChevronRight size={15} />
+        </PaginationLink>
+      </PaginationItem>
+    )
+  };
+
+  if (totalPages <= 1) {
+    return null;
+  }
+
+  return (
+    <Paginate className='d-flex m-2'>
+      { previousButton() }
+      { pageButtons().map(button => button) }
+      { nextButton() }
+    </Paginate>
+  );
+};
+
+export default Pagination;

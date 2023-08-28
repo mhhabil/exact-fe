@@ -1,0 +1,5 @@
+const InternationaleId = {
+    //
+}
+
+export { InternationaleId }

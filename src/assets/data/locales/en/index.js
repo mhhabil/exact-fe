@@ -1,0 +1,5 @@
+const InternationaleEn = {
+    //
+}
+
+export { InternationaleEn }

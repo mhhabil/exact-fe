@@ -1,0 +1,17 @@
+export default [
+  'Asma', 
+  'Hipertensi',
+  'Diabetes',
+  'Penyakit Jantung',
+  'Gagal Ginjal',
+  'Kanker',
+  'Stroke',
+  'Pneumonia',
+  'TB Paru',
+  'Hepatitis',
+  'Sirosis Hati',
+  'HIV',
+  'Thalasemia',
+  'Leukimia',
+  'Hemofilia',
+];

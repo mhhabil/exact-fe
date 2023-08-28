@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    image: ghcr.io/gic-indonesia/gic-emr-fe:latest
+    container_name: "gic-emr-fe"
+    restart: always
+    ports:
+      - "3110:3110"
+    volumes:
+      - ./next.config.js:/app/next.config.js

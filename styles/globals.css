@@ -1,0 +1,217 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 600 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: black !important;
+}
+
+#__next {
+  height: 100%;
+}
+
+div.form-group {
+  margin-bottom: 0.2rem !important;
+}
+
+.row.d-flex > * {
+  width: inherit;
+}
+
+.w-6rem {
+  width: 6rem !important;
+}
+
+.table > thead > tr > th {
+  vertical-align: middle;
+}
+
+.pt-11 {
+  padding-top: 11rem;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.table-cppt > tbody > tr > td {
+  color: black;
+}
+
+.font-11 > tbody > tr > td {
+  font-size: 11px;
+}
+
+.font-12 > tbody > tr > td {
+  font-size: 12px;
+}
+
+.font-13 > tbody > tr > td {
+  font-size: 13px;
+}
+
+.font-14 > tbody > tr > td {
+  font-size: 14px;
+}
+
+.font-15 > tbody > tr > td {
+  font-size: 15px;
+}
+
+.font-16 > tbody > tr > td {
+  font-size: 16px;
+}
+
+.font-17 > tbody > tr > td {
+  font-size: 17px;
+}
+
+.font-18 > tbody > tr > td {
+  font-size: 18px;
+}
+
+.font-19 > tbody > tr > td {
+  font-size: 19px;
+}
+
+.font-20 > tbody > tr > td {
+  font-size: 20px;
+}
+
+.disabled-div {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.table-data-o > tbody > tr > td {
+  padding: 0;
+}
+
+.btn-icon * {
+  color: white !important;
+}
+
+.dicom-img-thumbnail {
+  transition: transform 0.2s;
+}
+
+.dicom-img-thumbnail:hover {
+  transform: scale(1.2);
+}
+
+.nav-item.active * {
+  color: white !important;
+}
+
+.prevent-select {
+  /* -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;  */
+  /* padding-left: 0;
+  padding-right: 0; */
+}
+
+.btn-action-cppt {
+  margin: 1px;
+}
+
+.login-bg-exact {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  margin-top: 38%;
+  margin-left: 6%;
+  /* top: 88%;
+  left: 6%; */
+}
+
+.btn * {
+  color: white !important;
+}
+
+body.modal-open {
+  overflow: hidden;
+  overscroll-behavior: 'contain';
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1
+}
+
+.card .card-header {
+  padding: 1.5rem 1.5rem .5rem 1.5rem;
+}
+
+.table tr td {
+  padding: 0.25;
+}
+
+button.btn {
+  padding: 0.4rem 0.6rem;
+}
+button.btn.btn-icon {
+  padding: 0.415rem 0.436rem;
+}
+
+.tooltip-text {
+  color: white !important;
+}
+
+.lolo-item {
+  word-wrap: break-word;
+  display: block;
+}
+.form-check-label.form-label {
+  font-size: 0.857rem !important;
+}
+.app-form-check {
+  padding-top: calc(0.571rem + 1px);
+  padding-bottom: calc(0.571rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.45;
+  color: #5e5873;
+}
+
+.pt-0 {
+  padding: 0.4rem 0.4rem !important;
+}
+
+.pt-2 {
+  padding: 0.4rem 0.4rem !important;
+}
+
+.icare-btn {
+  position: absolute;
+  background-color: #273851;
+  border:none;
+  padding: 10px;
+  height: 45px;
+  min-height: 30px;
+  min-width: 100px; 
+  border-radius:10px;
+}
+
+.icare-btn:hover {
+  background-color: #0aa15b;
+  transition: 0.7s;
+}
+
+.icon-icare {
+  color: white !important;
+}

@@ -1,0 +1,183 @@
+import { IAssessmentUgdFormModel } from "@src/modules/emergency-room/assessment/models/assessment-ugd-models";
+import { INursingEarlyWarning } from "@src/modules/inpatient/nursing-early-warning-scoring-table/models/nursing-early-warning-scoring.model";
+import { IPerioperativeNursingRecordsFormModel } from "@src/modules/operating-room/perioperative-nursing-records/models/perioperative-nursing-records.model";
+import { DataModel, IDataModel } from "@src/shared/model";
+
+export interface IPatientHandoverFormModel {
+    N: string;
+    T: string;
+    Pa: string;
+    Rr: string;
+    Td: string;
+    Mual: string;
+    Infus: string;
+    Minum: string;
+    Anestesi: string;
+    Kesadaran: string;
+    Kesakitan: string;
+    Lain_lain: string;
+    Luka_Lain: string;
+    Obat_Lain: string;
+    Antibiotik: string;
+    ID_Petugas: string;
+    Tetes_Mata: string;
+    Updated_At: string;
+    Updated_By: string;
+    Luka_Operasi: string;
+    Nama_Petugas: string;
+    Steward_Score: string;
+    Alderette_Score: string;
+    Penanggungjawab: string;
+    Steward_Motorik: string;
+    Waktu_Verifikasi: string;
+    Monitoring_Selama: string;
+    Monitoring_Setiap: string;
+    Steward_Kesadaran: string;
+    Steward_Pernafasan: string;
+    Alderette_Aktivitas: string;
+    Alderette_Kesadaran: string;
+    Alderette_Sirkulasi: string;
+    Alderette_Pernafasan: string;
+    Penanggungjawab_Lain: string;
+    Alderette_Warna_Kulit: string;
+    ID_Perawat_Kamar_Bedah: string;
+    ID_Perawat_Ranap_Rajal: string;
+    TTD_Perawat_Kamar_Bedah: string;
+    TTD_Perawat_Ranap_Rajal: string;
+    Nama_Perawat_Kamar_Bedah: string;
+    Nama_Perawat_Ranap_Rajal: string;
+    Steward_Motorik_Keterangan: string;
+    Steward_Kesadaran_Keterangan: string;
+    Steward_Pernafasan_Keterangan: string;
+    Alderette_Aktivitas_Keterangan: string;
+    Alderette_Kesadaran_Keterangan: string;
+    Alderette_Sirkulasi_Keterangan: string;
+    Alderette_Pernafasan_Keterangan: string;
+    Alderette_Warna_Kulit_Keterangan: string;
+}
+
+export class PatientHandoverFormModel {
+    N: string;
+    T: string;
+    Pa: string;
+    Rr: string;
+    Td: string;
+    Mual: string;
+    Infus: string;
+    Minum: string;
+    Anestesi: string;
+    Kesadaran: string;
+    Kesakitan: string;
+    Lain_lain: string;
+    Luka_Lain: string;
+    Obat_Lain: string;
+    Antibiotik: string;
+    ID_Petugas: string;
+    Tetes_Mata: string;
+    Updated_At: string;
+    Updated_By: string;
+    Luka_Operasi: string;
+    Nama_Petugas: string;
+    Steward_Score: string;
+    Alderette_Score: string;
+    Penanggungjawab: string;
+    Steward_Motorik: string;
+    Waktu_Verifikasi: string;
+    Monitoring_Selama: string;
+    Monitoring_Setiap: string;
+    Steward_Kesadaran: string;
+    Steward_Pernafasan: string;
+    Alderette_Aktivitas: string;
+    Alderette_Kesadaran: string;
+    Alderette_Sirkulasi: string;
+    Alderette_Pernafasan: string;
+    Penanggungjawab_Lain: string;
+    Alderette_Warna_Kulit: string;
+    ID_Perawat_Kamar_Bedah: string;
+    ID_Perawat_Ranap_Rajal: string;
+    TTD_Perawat_Kamar_Bedah: string;
+    TTD_Perawat_Ranap_Rajal: string;
+    Nama_Perawat_Kamar_Bedah: string;
+    Nama_Perawat_Ranap_Rajal: string;
+    Steward_Motorik_Keterangan: string;
+    Steward_Kesadaran_Keterangan: string;
+    Steward_Pernafasan_Keterangan: string;
+    Alderette_Aktivitas_Keterangan: string;
+    Alderette_Kesadaran_Keterangan: string;
+    Alderette_Sirkulasi_Keterangan: string;
+    Alderette_Pernafasan_Keterangan: string;
+    Alderette_Warna_Kulit_Keterangan: string;
+    constructor(request: IPatientHandoverFormModel) {
+      this.N = request.N;
+      this.T = request.T;
+      this.Pa = request.Pa;
+      this.Rr = request.Rr;
+      this.Td = request.Td;
+      this.Mual = request.Mual;
+      this.Infus = request.Infus;
+      this.Minum = request.Minum;
+      this.Anestesi = request.Anestesi;
+      this.Kesadaran = request.Kesadaran;
+      this.Kesakitan = request.Kesakitan;
+      this.Lain_lain = request.Lain_lain;
+      this.Luka_Lain = request.Luka_Lain;
+      this.Obat_Lain = request.Obat_Lain;
+      this.Antibiotik = request.Antibiotik;
+      this.ID_Petugas = request.ID_Petugas;
+      this.Tetes_Mata = request.Tetes_Mata;
+      this.Updated_At = request.Updated_By;
+      this.Updated_By = request.Updated_By;
+      this.Luka_Operasi = request.Luka_Operasi;
+      this.Nama_Petugas = request.Nama_Petugas;
+      this.Steward_Score = request.Steward_Score;
+      this.Alderette_Score = request.Alderette_Score;
+      this.Penanggungjawab = request.Penanggungjawab;
+      this.Steward_Motorik = request.Steward_Motorik;
+      this.Waktu_Verifikasi = request.Waktu_Verifikasi;
+      this.Monitoring_Selama = request.Monitoring_Selama;
+      this.Monitoring_Setiap = request.Monitoring_Setiap;
+      this.Steward_Kesadaran = request.Steward_Kesadaran;
+      this.Steward_Pernafasan = request.Steward_Pernafasan;
+      this.Alderette_Aktivitas = request.Alderette_Aktivitas;
+      this.Alderette_Kesadaran = request.Alderette_Kesadaran;
+      this.Alderette_Sirkulasi = request.Alderette_Sirkulasi;
+      this.Alderette_Pernafasan = request.Alderette_Pernafasan;
+      this.Penanggungjawab_Lain = request.Penanggungjawab_Lain;
+      this.Alderette_Warna_Kulit = request.Alderette_Warna_Kulit;
+      this.ID_Perawat_Kamar_Bedah = request.ID_Perawat_Kamar_Bedah;
+      this.ID_Perawat_Ranap_Rajal = request.ID_Perawat_Ranap_Rajal;
+      this.TTD_Perawat_Kamar_Bedah = request.TTD_Perawat_Kamar_Bedah;
+      this.TTD_Perawat_Ranap_Rajal = request.TTD_Perawat_Ranap_Rajal;
+      this.Nama_Perawat_Kamar_Bedah = request.Nama_Perawat_Kamar_Bedah;
+      this.Nama_Perawat_Ranap_Rajal =  request.Nama_Perawat_Ranap_Rajal;
+      this.Steward_Motorik_Keterangan = request.Steward_Motorik_Keterangan;
+      this.Steward_Kesadaran_Keterangan = request.Steward_Kesadaran_Keterangan;
+      this.Steward_Pernafasan_Keterangan = request.Steward_Pernafasan_Keterangan;
+      this.Alderette_Aktivitas_Keterangan = request.Alderette_Aktivitas_Keterangan;
+      this.Alderette_Kesadaran_Keterangan = request.Alderette_Kesadaran_Keterangan;
+      this.Alderette_Sirkulasi_Keterangan = request.Alderette_Sirkulasi_Keterangan;
+      this.Alderette_Pernafasan_Keterangan = request.Alderette_Pernafasan_Keterangan;
+      this.Alderette_Warna_Kulit_Keterangan = request.Alderette_Warna_Kulit_Keterangan;
+    }
+}
+
+export interface IPatientHandoverModel extends IDataModel {
+    form: IPatientHandoverFormModel;
+    asesmen: IAssessmentUgdFormModel;
+    ews: INursingEarlyWarning;
+    tanda_vital: IPerioperativeNursingRecordsFormModel;
+}
+
+export class PatientHandoverModel extends DataModel {
+    form: IPatientHandoverFormModel;
+    asesmen: IAssessmentUgdFormModel;
+    ews: INursingEarlyWarning;
+    tanda_vital: IPerioperativeNursingRecordsFormModel;
+    constructor(req: IPatientHandoverModel) {
+      super(req)
+      this.form = req.form;
+      this.asesmen = req.asesmen;
+      this.ews = req.ews;
+      this.tanda_vital = req.tanda_vital;
+    }
+}
